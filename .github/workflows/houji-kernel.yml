@@ -67,6 +67,11 @@ jobs:
           ./unixnu tree -D "$DEVICE_DIR"
           ./unixnu status -D "$DEVICE_DIR"
 
+      - name: Apply the XNU tree fixes (ARM64 asm/pmap, Apple-closed PPL stubs)
+        working-directory: unixnu
+        run: |
+          bash "$DEVICE_DIR/scripts/apply-tree-xnu-fixes.sh" "$DEVICE_DIR"
+
       - name: Build XNU kernel
         working-directory: unixnu
         run: |
