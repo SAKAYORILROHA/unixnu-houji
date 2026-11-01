@@ -1,0 +1,98 @@
+name: houji XNU kernel
+
+# 在 macOS runner 上构建小米 14（houji）的 XNU 内核。
+# 触发：Actions → houji XNU kernel → Run workflow（保留默认 Xcode 版本即可）。
+# 产物：houji-kernel-<run> 压缩包，内含 out/houji/** 与构建日志。
+
+on:
+  workflow_dispatch:
+    inputs:
+      xcode:
+        description: "macos-26 runner 上的 Xcode 版本"
+        required: true
+        default: "26.6"
+      jobs:
+        description: "并行编译任务数"
+        required: true
+        default: "4"
+
+permissions:
+  contents: read
+
+jobs:
+  kernel:
+    runs-on: macos-26
+    timeout-minutes: 360
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_${{ inputs.xcode }}.app/Contents/Developer
+      DEVICE_DIR: ${{ github.workspace }}/device
+    steps:
+      - name: Checkout UniXNU
+        uses: actions/checkout@v4
+        with:
+          repository: UniXNU/UniXNU
+          path: unixnu
+          persist-credentials: false
+
+      - name: Checkout houji device repository
+        uses: actions/checkout@v4
+        with:
+          path: device
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install host tools
+        run: |
+          brew install llvm lld mtools dtc
+          command -v unifdef >/dev/null || brew install unifdef
+          echo "llvm: $(brew --prefix llvm)"
+
+      - name: Validate runner
+        run: |
+          test -d "$DEVELOPER_DIR"
+          xcodebuild -version
+          xcrun --sdk iphoneos --show-sdk-version
+          xcrun --sdk iphoneos --find mig
+          for tool in git make clang cmake ninja unifdef; do command -v "$tool"; done
+
+      - name: Configure, fetch and assemble sources
+        working-directory: unixnu
+        run: |
+          ./unixnu defconfig houji_defconfig -D "$DEVICE_DIR"
+          ./unixnu fetch -D "$DEVICE_DIR"
+          ./unixnu tree -D "$DEVICE_DIR"
+          ./unixnu status -D "$DEVICE_DIR"
+
+      - name: Build XNU kernel
+        working-directory: unixnu
+        run: |
+          ./unixnu build kernel -D "$DEVICE_DIR" -j "${{ inputs.jobs }}"
+
+      - name: Prelink with the iOS 16.7.16 / 20H392 kernelcache
+        id: prelink
+        continue-on-error: true
+        working-directory: unixnu
+        run: |
+          # board.toml 的 [ipsw] url 指向 Apple CDN，prelink 只按需 range 读取 kernelcache 成员
+          ./unixnu build prelink -D "$DEVICE_DIR"
+
+      - name: Collect logs
+        if: always()
+        working-directory: unixnu
+        run: |
+          mkdir -p out/houji/logs || true
+          ls -l out/houji out/houji/kernel 2>/dev/null || true
+
+      - name: Upload kernel and logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: houji-kernel-${{ github.run_number }}
+          include-hidden-files: true
+          if-no-files-found: warn
+          path: |
+            unixnu/out/houji/**
+            device/unixnu.lock
