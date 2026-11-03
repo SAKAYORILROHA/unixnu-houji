@@ -1,0 +1,640 @@
+﻿2026-11-01T02:01:26.9596000Z Current runner version: '2.338.2'
+2026-11-01T02:01:26.9612780Z ##[group]Runner Image Provisioner
+2026-11-01T02:01:26.9613350Z Hosted Compute Agent
+2026-11-01T02:01:26.9613770Z Version: 20261021.618
+2026-11-01T02:01:26.9614410Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-11-01T02:01:26.9614950Z Build Date: 2026-10-21T00:45:21Z
+2026-11-01T02:01:26.9615460Z Worker ID: {b1150a11-9cf4-44cf-8e02-2252ba05ba27}
+2026-11-01T02:01:26.9616000Z Region: westus
+2026-11-01T02:01:26.9616410Z Cloud: MacCloud
+2026-11-01T02:01:26.9616820Z ##[endgroup]
+2026-11-01T02:01:26.9617870Z ##[group]Operating System
+2026-11-01T02:01:26.9618240Z macOS
+2026-11-01T02:01:26.9618550Z 26.6.2
+2026-11-01T02:01:26.9618860Z 25G83
+2026-11-01T02:01:26.9619180Z ##[endgroup]
+2026-11-01T02:01:26.9619520Z ##[group]Runner Image
+2026-11-01T02:01:26.9619880Z Image: macos-26-arm64
+2026-11-01T02:01:26.9620220Z Version: 20261026.0455.2
+2026-11-01T02:01:26.9621070Z Included Software: https://github.com/actions/runner-images/blob/macos-26-arm64/20261026.0455/images/macos/macos-26-arm64-Readme.md
+2026-11-01T02:01:26.9622090Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-26-arm64%2F20261026.0455
+2026-11-01T02:01:26.9622730Z ##[endgroup]
+2026-11-01T02:01:26.9623480Z ##[group]GITHUB_TOKEN Permissions
+2026-11-01T02:01:26.9625000Z Contents: read
+2026-11-01T02:01:26.9625430Z Metadata: read
+2026-11-01T02:01:26.9625790Z ##[endgroup]
+2026-11-01T02:01:26.9627260Z Secret source: Actions
+2026-11-01T02:01:26.9627870Z Cache mode: write
+2026-11-01T02:01:26.9628330Z Prepare workflow directory
+2026-11-01T02:01:26.9989010Z Prepare all required actions
+2026-11-01T02:01:27.0023360Z Getting action download info
+2026-11-01T02:01:27.6071730Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-01T02:01:27.9634190Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-01T02:01:28.1072350Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-01T02:01:28.2911180Z Complete job name: kernel
+2026-11-01T02:01:28.3470720Z ##[group]Run actions/checkout@v4
+2026-11-01T02:01:28.3471430Z with:
+2026-11-01T02:01:28.3471760Z   repository: UniXNU/UniXNU
+2026-11-01T02:01:28.3472130Z   path: unixnu
+2026-11-01T02:01:28.3472460Z   persist-credentials: false
+2026-11-01T02:01:28.3475450Z   token: ***
+2026-11-01T02:01:28.3475760Z   ssh-strict: true
+2026-11-01T02:01:28.3476110Z   ssh-user: git
+2026-11-01T02:01:28.3476420Z   clean: true
+2026-11-01T02:01:28.3476770Z   sparse-checkout-cone-mode: true
+2026-11-01T02:01:28.3477170Z   fetch-depth: 1
+2026-11-01T02:01:28.3477510Z   fetch-tags: false
+2026-11-01T02:01:28.3477840Z   show-progress: true
+2026-11-01T02:01:28.3478280Z   lfs: false
+2026-11-01T02:01:28.3478670Z   submodules: false
+2026-11-01T02:01:28.3479100Z   set-safe-directory: true
+2026-11-01T02:01:28.3479610Z   allow-unsafe-pr-checkout: false
+2026-11-01T02:01:28.3480260Z env:
+2026-11-01T02:01:28.3480760Z   DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+2026-11-01T02:01:28.3481590Z   DEVICE_DIR: /Users/runner/work/unixnu-houji/unixnu-houji/device
+2026-11-01T02:01:28.3485250Z   GITHUB_TOKEN: ***
+2026-11-01T02:01:28.3485660Z ##[endgroup]
+2026-11-01T02:01:28.8618810Z Syncing repository: UniXNU/UniXNU
+2026-11-01T02:01:28.8620430Z ##[group]Getting Git version info
+2026-11-01T02:01:28.8621160Z Working directory is '/Users/runner/work/unixnu-houji/unixnu-houji/unixnu'
+2026-11-01T02:01:28.8622270Z [command]/opt/homebrew/bin/git version
+2026-11-01T02:01:28.8881500Z git version 2.56.0
+2026-11-01T02:01:28.8898640Z ##[endgroup]
+2026-11-01T02:01:28.8904990Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/7cea924b-319c-47f3-9361-997fd68b718b/.gitconfig'
+2026-11-01T02:01:28.8912010Z Temporarily overriding HOME='/Users/runner/work/_temp/7cea924b-319c-47f3-9361-997fd68b718b' before making global git config changes
+2026-11-01T02:01:28.8913170Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-01T02:01:28.8915680Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/unixnu-houji/unixnu-houji/unixnu
+2026-11-01T02:01:28.9017360Z ##[group]Initializing the repository
+2026-11-01T02:01:28.9020100Z [command]/opt/homebrew/bin/git init /Users/runner/work/unixnu-houji/unixnu-houji/unixnu
+2026-11-01T02:01:28.9247480Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-01T02:01:28.9248450Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-01T02:01:28.9249450Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-01T02:01:28.9250170Z hint: call:
+2026-11-01T02:01:28.9250530Z hint:
+2026-11-01T02:01:28.9251060Z hint: 	git config --global init.defaultBranch <name>
+2026-11-01T02:01:28.9251640Z hint:
+2026-11-01T02:01:28.9252190Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-01T02:01:28.9252990Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-01T02:01:28.9254490Z hint:
+2026-11-01T02:01:28.9254990Z hint: 	git branch -m <name>
+2026-11-01T02:01:28.9255500Z hint:
+2026-11-01T02:01:28.9256070Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-01T02:01:28.9257000Z Initialized empty Git repository in /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/
+2026-11-01T02:01:28.9261630Z [command]/opt/homebrew/bin/git remote add origin https://github.com/UniXNU/UniXNU
+2026-11-01T02:01:28.9353140Z ##[endgroup]
+2026-11-01T02:01:28.9355070Z ##[group]Disabling automatic garbage collection
+2026-11-01T02:01:28.9360480Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+2026-11-01T02:01:28.9562770Z ##[endgroup]
+2026-11-01T02:01:28.9564260Z ##[group]Setting up auth
+2026-11-01T02:01:28.9565120Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-01T02:01:28.9595840Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-01T02:01:29.0745400Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-01T02:01:29.0751590Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-01T02:01:29.1561880Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:01:29.1628240Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-01T02:01:29.2723930Z [command]/opt/homebrew/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-01T02:01:29.2851090Z ##[endgroup]
+2026-11-01T02:01:29.2852210Z ##[group]Determining the default branch
+2026-11-01T02:01:29.2852910Z Retrieving the default branch name
+2026-11-01T02:01:29.7222430Z Default branch 'main'
+2026-11-01T02:01:29.7248040Z ##[endgroup]
+2026-11-01T02:01:29.7256700Z ##[group]Fetching the repository
+2026-11-01T02:01:29.7267380Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/main:refs/remotes/origin/main
+2026-11-01T02:01:30.7033390Z From https://github.com/UniXNU/UniXNU
+2026-11-01T02:01:30.7035050Z  * [new branch]      main       -> origin/main
+2026-11-01T02:01:30.7037180Z ##[endgroup]
+2026-11-01T02:01:30.7037990Z ##[group]Determining the checkout info
+2026-11-01T02:01:30.7038870Z ##[endgroup]
+2026-11-01T02:01:30.7041340Z [command]/opt/homebrew/bin/git sparse-checkout disable
+2026-11-01T02:01:30.7125830Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-01T02:01:30.7190170Z ##[group]Checking out the ref
+2026-11-01T02:01:30.7192920Z [command]/opt/homebrew/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-01T02:01:30.8910900Z Switched to a new branch 'main'
+2026-11-01T02:01:30.8920570Z branch 'main' set up to track 'origin/main'.
+2026-11-01T02:01:30.9049890Z ##[endgroup]
+2026-11-01T02:01:30.9076070Z [command]/opt/homebrew/bin/git log -1 --format=%H
+2026-11-01T02:01:30.9097190Z 34576e7397a168dea9b76e2924b61dddeb86093d
+2026-11-01T02:01:30.9104590Z ##[group]Removing auth
+2026-11-01T02:01:30.9107810Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-01T02:01:30.9177960Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-01T02:01:31.0135590Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-01T02:01:31.0244000Z http.https://github.com/.extraheader
+2026-11-01T02:01:31.0381720Z [command]/opt/homebrew/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-01T02:01:31.0434930Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-01T02:01:31.1595850Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:01:31.1671300Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-01T02:01:31.2643660Z ##[endgroup]
+2026-11-01T02:01:31.2878690Z ##[group]Run actions/checkout@v4
+2026-11-01T02:01:31.2879000Z with:
+2026-11-01T02:01:31.2879190Z   path: device
+2026-11-01T02:01:31.2879360Z   persist-credentials: false
+2026-11-01T02:01:31.2879560Z   repository: SAKAYORILROHA/unixnu-houji
+2026-11-01T02:01:31.2882850Z   token: ***
+2026-11-01T02:01:31.2883200Z   ssh-strict: true
+2026-11-01T02:01:31.2883450Z   ssh-user: git
+2026-11-01T02:01:31.2883720Z   clean: true
+2026-11-01T02:01:31.2883960Z   sparse-checkout-cone-mode: true
+2026-11-01T02:01:31.2884250Z   fetch-depth: 1
+2026-11-01T02:01:31.2884470Z   fetch-tags: false
+2026-11-01T02:01:31.2884680Z   show-progress: true
+2026-11-01T02:01:31.2884890Z   lfs: false
+2026-11-01T02:01:31.2885070Z   submodules: false
+2026-11-01T02:01:31.2885270Z   set-safe-directory: true
+2026-11-01T02:01:31.2885520Z   allow-unsafe-pr-checkout: false
+2026-11-01T02:01:31.2885720Z env:
+2026-11-01T02:01:31.2885940Z   DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+2026-11-01T02:01:31.2886850Z   DEVICE_DIR: /Users/runner/work/unixnu-houji/unixnu-houji/device
+2026-11-01T02:01:31.2889300Z   GITHUB_TOKEN: ***
+2026-11-01T02:01:31.2889450Z ##[endgroup]
+2026-11-01T02:01:31.5816630Z Syncing repository: SAKAYORILROHA/unixnu-houji
+2026-11-01T02:01:31.5918490Z ##[group]Getting Git version info
+2026-11-01T02:01:31.5919250Z Working directory is '/Users/runner/work/unixnu-houji/unixnu-houji/device'
+2026-11-01T02:01:31.6020880Z [command]/opt/homebrew/bin/git version
+2026-11-01T02:01:31.6080670Z git version 2.56.0
+2026-11-01T02:01:31.6160720Z ##[endgroup]
+2026-11-01T02:01:31.6190600Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/ab05f98a-4d0e-4d38-b1c3-a3984bc9ab44/.gitconfig'
+2026-11-01T02:01:31.6197460Z Temporarily overriding HOME='/Users/runner/work/_temp/ab05f98a-4d0e-4d38-b1c3-a3984bc9ab44' before making global git config changes
+2026-11-01T02:01:31.6201180Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-01T02:01:31.6205250Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/unixnu-houji/unixnu-houji/device
+2026-11-01T02:01:31.6554180Z ##[group]Initializing the repository
+2026-11-01T02:01:31.6624430Z [command]/opt/homebrew/bin/git init /Users/runner/work/unixnu-houji/unixnu-houji/device
+2026-11-01T02:01:31.6726920Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-01T02:01:31.6828450Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-01T02:01:31.6887990Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-01T02:01:31.6937160Z hint: call:
+2026-11-01T02:01:31.6937450Z hint:
+2026-11-01T02:01:31.6954550Z hint: 	git config --global init.defaultBranch <name>
+2026-11-01T02:01:31.6954810Z hint:
+2026-11-01T02:01:31.6955070Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-01T02:01:31.6955490Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-01T02:01:31.6955980Z hint:
+2026-11-01T02:01:31.6956220Z hint: 	git branch -m <name>
+2026-11-01T02:01:31.6956580Z hint:
+2026-11-01T02:01:31.6957010Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-01T02:01:31.6957550Z Initialized empty Git repository in /Users/runner/work/unixnu-houji/unixnu-houji/device/.git/
+2026-11-01T02:01:31.6958970Z [command]/opt/homebrew/bin/git remote add origin https://github.com/SAKAYORILROHA/unixnu-houji
+2026-11-01T02:01:31.6959940Z ##[endgroup]
+2026-11-01T02:01:31.6960420Z ##[group]Disabling automatic garbage collection
+2026-11-01T02:01:31.6960800Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+2026-11-01T02:01:31.6961540Z ##[endgroup]
+2026-11-01T02:01:31.6961820Z ##[group]Setting up auth
+2026-11-01T02:01:31.6962240Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-01T02:01:31.6964100Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-01T02:01:31.7073860Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-01T02:01:31.7161210Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-01T02:01:31.8106520Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:01:31.8182330Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-01T02:01:31.9105580Z [command]/opt/homebrew/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-01T02:01:31.9182970Z ##[endgroup]
+2026-11-01T02:01:31.9184130Z ##[group]Fetching the repository
+2026-11-01T02:01:31.9189150Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e6e6ab7c7234334cbbf1051e2b5fb59a3c36a833:refs/remotes/origin/main
+2026-11-01T02:01:32.4667040Z From https://github.com/SAKAYORILROHA/unixnu-houji
+2026-11-01T02:01:32.4668070Z  * [new ref]         e6e6ab7c7234334cbbf1051e2b5fb59a3c36a833 -> origin/main
+2026-11-01T02:01:32.4671380Z ##[endgroup]
+2026-11-01T02:01:32.4671880Z ##[group]Determining the checkout info
+2026-11-01T02:01:32.4673090Z ##[endgroup]
+2026-11-01T02:01:32.4677080Z [command]/opt/homebrew/bin/git sparse-checkout disable
+2026-11-01T02:01:32.4760680Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-01T02:01:32.4828410Z ##[group]Checking out the ref
+2026-11-01T02:01:32.4837300Z [command]/opt/homebrew/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-01T02:01:32.5208900Z Switched to a new branch 'main'
+2026-11-01T02:01:32.5214260Z branch 'main' set up to track 'origin/main'.
+2026-11-01T02:01:32.5221950Z ##[endgroup]
+2026-11-01T02:01:32.5332240Z [command]/opt/homebrew/bin/git log -1 --format=%H
+2026-11-01T02:01:32.5422860Z e6e6ab7c7234334cbbf1051e2b5fb59a3c36a833
+2026-11-01T02:01:32.5431290Z ##[group]Removing auth
+2026-11-01T02:01:32.5434620Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-01T02:01:32.5506630Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-01T02:01:32.6929030Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-01T02:01:32.6987110Z http.https://github.com/.extraheader
+2026-11-01T02:01:32.6993180Z [command]/opt/homebrew/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-01T02:01:32.7063620Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-01T02:01:32.7905010Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:01:32.7972340Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-01T02:01:32.8956010Z ##[endgroup]
+2026-11-01T02:01:32.9094750Z ##[group]Run actions/setup-python@v5
+2026-11-01T02:01:32.9094990Z with:
+2026-11-01T02:01:32.9095210Z   python-version: 3.13
+2026-11-01T02:01:32.9095400Z   check-latest: false
+2026-11-01T02:01:32.9097510Z   token: ***
+2026-11-01T02:01:32.9097660Z   update-environment: true
+2026-11-01T02:01:32.9097840Z   allow-prereleases: false
+2026-11-01T02:01:32.9098030Z   freethreaded: false
+2026-11-01T02:01:32.9098240Z env:
+2026-11-01T02:01:32.9098470Z   DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+2026-11-01T02:01:32.9099020Z   DEVICE_DIR: /Users/runner/work/unixnu-houji/unixnu-houji/device
+2026-11-01T02:01:32.9101320Z   GITHUB_TOKEN: ***
+2026-11-01T02:01:32.9101470Z ##[endgroup]
+2026-11-01T02:01:33.0361830Z ##[group]Installed versions
+2026-11-01T02:01:33.0466680Z (node:3780) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-01T02:01:33.0467530Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-01T02:01:33.0468070Z Successfully set up CPython (3.13.17)
+2026-11-01T02:01:33.0468590Z ##[endgroup]
+2026-11-01T02:01:33.0608300Z ##[group]Run brew install llvm lld mtools dtc
+2026-11-01T02:01:33.0608740Z [36;1mbrew install llvm lld mtools dtc[0m
+2026-11-01T02:01:33.0609050Z [36;1mcommand -v unifdef >/dev/null || brew install unifdef[0m
+2026-11-01T02:01:33.0677970Z shell: /bin/bash -e {0}
+2026-11-01T02:01:33.0678230Z env:
+2026-11-01T02:01:33.0678500Z   DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+2026-11-01T02:01:33.0678890Z   DEVICE_DIR: /Users/runner/work/unixnu-houji/unixnu-houji/device
+2026-11-01T02:01:33.0681930Z   GITHUB_TOKEN: ***
+2026-11-01T02:01:33.0682290Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.13.17/arm64
+2026-11-01T02:01:33.0682830Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.13.17/arm64/lib/pkgconfig
+2026-11-01T02:01:33.0683300Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.13.17/arm64
+2026-11-01T02:01:33.0683680Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.13.17/arm64
+2026-11-01T02:01:33.0684170Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.13.17/arm64
+2026-11-01T02:01:33.0684530Z ##[endgroup]
+2026-11-01T02:01:36.8953790Z [32m==>[0m [1mDownloading bottle manifests[0m
+2026-11-01T02:01:36.9010670Z ✔︎ Bottle Manifest llvm (23.1.4)
+2026-11-01T02:01:36.9011430Z ✔︎ Bottle Manifest lld (23.1.4)
+2026-11-01T02:01:36.9012020Z ✔︎ Bottle Manifest mtools (4.0.49)
+2026-11-01T02:01:36.9012500Z ✔︎ Bottle Manifest dtc (1.8.1)
+2026-11-01T02:01:36.9587180Z [34m==>[0m [1mWould install 4 formulae:[0m
+2026-11-01T02:01:36.9588770Z llvm    23.1.4
+2026-11-01T02:01:36.9589410Z lld     23.1.4
+2026-11-01T02:01:36.9589600Z mtools  4.0.49
+2026-11-01T02:01:36.9590030Z dtc     1.8.1
+2026-11-01T02:01:36.9592190Z [34m==>[0m [1mWould install 1 dependency for llvm:[0m
+2026-11-01T02:01:36.9592840Z z3 5.3.2
+2026-11-01T02:01:36.9783730Z [34m==>[0m [1mWould install 2 dependencies for lld:[0m
+2026-11-01T02:01:36.9787750Z z3    5.3.2
+2026-11-01T02:01:36.9789000Z llvm  23.1.4
+2026-11-01T02:01:37.0505490Z [32m==>[0m [1mFetching downloads for: [32mllvm[39m, [32mlld[39m, [32mmtools[39m and [32mdtc[39m[0m
+2026-11-01T02:01:37.3041160Z ✔︎ Bottle Manifest z3 (5.3.2)
+2026-11-01T02:01:41.9831810Z ✔︎ Bottle lld (23.1.4)
+2026-11-01T02:01:41.9898270Z ✔︎ Bottle dtc (1.8.1)
+2026-11-01T02:01:42.0002570Z ✔︎ Bottle mtools (4.0.49)
+2026-11-01T02:01:42.0720680Z ✔︎ Bottle z3 (5.3.2)
+2026-11-01T02:01:48.7466920Z ✔︎ Bottle llvm (23.1.4)
+2026-11-01T02:01:48.7636150Z [32m==>[0m [1mInstalling llvm dependency: [32mz3[39m (5.3.2)[0m
+2026-11-01T02:01:48.7706480Z [34m==>[0m [1mPouring z3--5.3.2.arm64_tahoe.bottle.tar.gz[0m
+2026-11-01T02:01:50.3516410Z 🍺  /opt/homebrew/Cellar/z3/5.3.2: 141 files, 44.5MB
+2026-11-01T02:01:50.3528600Z [32m==>[0m [1mInstalling [32mllvm[39m[0m
+2026-11-01T02:01:50.3531000Z [34m==>[0m [1mPouring llvm--23.1.4.arm64_tahoe.bottle.tar.gz[0m
+2026-11-01T02:02:01.6140970Z 🍺  /opt/homebrew/Cellar/llvm/23.1.4: 9,338 files, 1.9GB
+2026-11-01T02:02:01.6447180Z [34m==>[0m [1mPouring lld--23.1.4.arm64_tahoe.bottle.tar.gz[0m
+2026-11-01T02:02:02.7920810Z 🍺  /opt/homebrew/Cellar/lld/23.1.4: 44 files, 6MB
+2026-11-01T02:02:02.7952370Z [34m==>[0m [1mPouring mtools--4.0.49.arm64_tahoe.bottle.tar.gz[0m
+2026-11-01T02:02:03.2735930Z 🍺  /opt/homebrew/Cellar/mtools/4.0.49: 69 files, 596.3KB
+2026-11-01T02:02:03.2835110Z [34m==>[0m [1mPouring dtc--1.8.1.arm64_tahoe.bottle.tar.gz[0m
+2026-11-01T02:02:04.7038820Z 🍺  /opt/homebrew/Cellar/dtc/1.8.1: 19 files, 588.2KB
+2026-11-01T02:02:04.7045740Z [32m==>[0m [1mCaveats[0m
+2026-11-01T02:02:04.7047530Z [34m==>[0m [1mllvm[0m
+2026-11-01T02:02:04.7048160Z CLANG_CONFIG_FILE_SYSTEM_DIR: /opt/homebrew/etc/clang
+2026-11-01T02:02:04.7048670Z CLANG_CONFIG_FILE_USER_DIR:   ~/.config/clang
+2026-11-01T02:02:04.7050210Z 
+2026-11-01T02:02:04.7050870Z LLD and LLDB are now provided in separate formulae:
+2026-11-01T02:02:04.7051300Z   brew install lld
+2026-11-01T02:02:04.7051590Z   brew install lldb
+2026-11-01T02:02:04.7051810Z 
+2026-11-01T02:02:04.7054520Z Z3 solver support will be removed in LLVM 24 as it is unsupported upstream,
+2026-11-01T02:02:04.7055220Z see https://github.com/llvm/llvm-project/pull/205370
+2026-11-01T02:02:04.7056440Z 
+2026-11-01T02:02:04.7057440Z Using `clang`, `clang++`, etc., requires a CLT installation at `/Library/Developer/CommandLineTools`.
+2026-11-01T02:02:04.7058570Z If you don't want to install the CLT, you can write appropriate configuration files pointing to your
+2026-11-01T02:02:04.7059530Z SDK at ~/.config/clang.
+2026-11-01T02:02:04.7059650Z 
+2026-11-01T02:02:04.7059860Z To use the bundled libunwind please use the following LDFLAGS:
+2026-11-01T02:02:04.7060410Z   LDFLAGS="-L/opt/homebrew/opt/llvm/lib/unwind -lunwind"
+2026-11-01T02:02:04.7061270Z 
+2026-11-01T02:02:04.7061540Z To use the bundled libc++ please use the following LDFLAGS:
+2026-11-01T02:02:04.7063960Z   LDFLAGS="-L/opt/homebrew/opt/llvm/lib/c++ -L/opt/homebrew/opt/llvm/lib/unwind -lunwind"
+2026-11-01T02:02:04.7066060Z Features newer than system libc++ will require the following define to enable
+2026-11-01T02:02:04.7067670Z (support for this may be removed in a future major LLVM release):
+2026-11-01T02:02:04.7068740Z   CPPFLAGS="-D_LIBCPP_DISABLE_AVAILABILITY"
+2026-11-01T02:02:04.7069440Z 
+2026-11-01T02:02:04.7070810Z NOTE: You probably want to use the libunwind and libc++ provided by macOS unless you know what you're doing.
+2026-11-01T02:02:04.7072100Z 
+2026-11-01T02:02:04.7072760Z llvm is keg-only, which means it was not symlinked into /opt/homebrew,
+2026-11-01T02:02:04.7074720Z because macOS already provides this software and installing another version in
+2026-11-01T02:02:04.7075450Z parallel can cause all kinds of trouble.
+2026-11-01T02:02:04.7075730Z 
+2026-11-01T02:02:04.7081280Z If you need to have llvm first in your PATH, run:
+2026-11-01T02:02:04.7081960Z   printf '%s\n' export\ PATH\=/opt/homebrew/opt/llvm/bin:\$PATH >> /Users/runner/.bash_profile
+2026-11-01T02:02:04.7084070Z 
+2026-11-01T02:02:04.7084390Z For compilers to find llvm you may need to set:
+2026-11-01T02:02:04.7097970Z   export LDFLAGS=-L/opt/homebrew/opt/llvm/lib
+2026-11-01T02:02:04.7101950Z   export CPPFLAGS=-I/opt/homebrew/opt/llvm/include
+2026-11-01T02:02:04.7102930Z 
+2026-11-01T02:02:04.7103320Z For cmake to find llvm you may need to set:
+2026-11-01T02:02:04.7104710Z   export CMAKE_PREFIX_PATH=/opt/homebrew/opt/llvm
+2026-11-01T02:02:04.7892600Z ##[group]Run test -d "$DEVELOPER_DIR"
+2026-11-01T02:02:04.7893550Z [36;1mtest -d "$DEVELOPER_DIR"[0m
+2026-11-01T02:02:04.7893880Z [36;1mxcodebuild -version[0m
+2026-11-01T02:02:04.7894300Z [36;1mxcrun --sdk iphoneos --show-sdk-version[0m
+2026-11-01T02:02:04.7894670Z [36;1mxcrun --sdk iphoneos --find mig[0m
+2026-11-01T02:02:04.7895170Z [36;1mfor tool in git make clang cmake ninja unifdef; do command -v "$tool"; done[0m
+2026-11-01T02:02:04.7953000Z shell: /bin/bash -e {0}
+2026-11-01T02:02:04.7953320Z env:
+2026-11-01T02:02:04.7953720Z   DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+2026-11-01T02:02:04.7954180Z   DEVICE_DIR: /Users/runner/work/unixnu-houji/unixnu-houji/device
+2026-11-01T02:02:04.7957050Z   GITHUB_TOKEN: ***
+2026-11-01T02:02:04.7957450Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.13.17/arm64
+2026-11-01T02:02:04.7957920Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.13.17/arm64/lib/pkgconfig
+2026-11-01T02:02:04.7958760Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.13.17/arm64
+2026-11-01T02:02:04.7959420Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.13.17/arm64
+2026-11-01T02:02:04.7959990Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.13.17/arm64
+2026-11-01T02:02:04.7960330Z ##[endgroup]
+2026-11-01T02:02:05.2208820Z Xcode 26.6
+2026-11-01T02:02:05.2212950Z Build version 17F113
+2026-11-01T02:02:07.2241500Z 26.5
+2026-11-01T02:02:07.7682250Z /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/mig
+2026-11-01T02:02:07.7685900Z /opt/homebrew/bin/git
+2026-11-01T02:02:07.7687060Z /usr/bin/make
+2026-11-01T02:02:07.7687750Z /usr/bin/clang
+2026-11-01T02:02:07.7687980Z /opt/homebrew/bin/cmake
+2026-11-01T02:02:07.7688540Z /opt/homebrew/bin/ninja
+2026-11-01T02:02:07.7688920Z /usr/bin/unifdef
+2026-11-01T02:02:07.7729570Z ##[group]Run ./unixnu defconfig houji_defconfig -D "$DEVICE_DIR"
+2026-11-01T02:02:07.7730040Z [36;1m./unixnu defconfig houji_defconfig -D "$DEVICE_DIR"[0m
+2026-11-01T02:02:07.7730380Z [36;1m./unixnu fetch -D "$DEVICE_DIR"[0m
+2026-11-01T02:02:07.7730770Z [36;1m./unixnu tree -D "$DEVICE_DIR"[0m
+2026-11-01T02:02:07.7731030Z [36;1m./unixnu status -D "$DEVICE_DIR"[0m
+2026-11-01T02:02:07.7767700Z shell: /bin/bash -e {0}
+2026-11-01T02:02:07.7767950Z env:
+2026-11-01T02:02:07.7768330Z   DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+2026-11-01T02:02:07.7768740Z   DEVICE_DIR: /Users/runner/work/unixnu-houji/unixnu-houji/device
+2026-11-01T02:02:07.7771040Z   GITHUB_TOKEN: ***
+2026-11-01T02:02:07.7771420Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.13.17/arm64
+2026-11-01T02:02:07.7771880Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.13.17/arm64/lib/pkgconfig
+2026-11-01T02:02:07.7772500Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.13.17/arm64
+2026-11-01T02:02:07.7772940Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.13.17/arm64
+2026-11-01T02:02:07.7773330Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.13.17/arm64
+2026-11-01T02:02:07.7773790Z ##[endgroup]
+2026-11-01T02:02:08.3674620Z == configuration houji_defconfig -> /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/out/houji/.config
+2026-11-01T02:02:08.4418510Z == submodules /Users/runner/work/unixnu-houji/unixnu-houji/unixnu
+2026-11-01T02:02:20.3006840Z == fetch https://github.com/apple-oss-distributions/xnu.git d8b80295118e
+2026-11-01T02:02:20.3312490Z + git -C /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/out/feeds/xnu-0b4b910d fetch -q --depth 1 origin d8b80295118ef25ac3a784134bcf95cd8e88109f
+2026-11-01T02:02:23.9643770Z == fetch https://github.com/apple-oss-distributions/libplatform.git a00a4cc36da2
+2026-11-01T02:02:24.0457540Z + git -C /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/out/feeds/libplatform-08d11127 fetch -q --depth 1 origin a00a4cc36da2110578bcf3b8eeeeb93dcc7f4e11
+2026-11-01T02:02:24.6959460Z == fetch https://github.com/apple-oss-distributions/libdispatch.git 30fe6a7d9453
+2026-11-01T02:02:24.8507660Z + git -C /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/out/feeds/libdispatch-50d3508d fetch -q --depth 1 origin 30fe6a7d945340ce69cef121132f049e810089a5
+2026-11-01T02:02:25.5847520Z == fetch https://github.com/apple-oss-distributions/AvailabilityVersions.git 933f9360f1b7
+2026-11-01T02:02:25.6271960Z + git -C /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/out/feeds/AvailabilityVersions-1c8ff76f fetch -q --depth 1 origin 933f9360f1b70dfbda5548386a3d65e0358b4f7d
+2026-11-01T02:02:26.2351090Z == fetch https://github.com/microsoft/mu_basecore.git cfb93724a06f
+2026-11-01T02:02:26.2871810Z + git -C /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/out/feeds/mu_basecore-89034cbb fetch -q --depth 1 origin cfb93724a06ff86ff5ba971413368a7809ee42a5
+2026-11-01T02:02:32.6304260Z + git -C /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/out/feeds/mu_basecore-89034cbb submodule update --init --depth 1 -- MdePkg/Library/BaseFdtLib/libfdt MdePkg/Library/MipiSysTLib/mipisyst BaseTools/Source/C/BrotliCompress/brotli MdeModulePkg/Library/BrotliCustomDecompressLib/brotli SecurityPkg/DeviceSecurity/SpdmLib/libspdm
+2026-11-01T02:02:32.8091280Z Submodule 'BaseTools/Source/C/BrotliCompress/brotli' (https://github.com/google/brotli) registered for path 'BaseTools/Source/C/BrotliCompress/brotli'
+2026-11-01T02:02:32.8095960Z Submodule 'MdeModulePkg/Library/BrotliCustomDecompressLib/brotli' (https://github.com/google/brotli) registered for path 'MdeModulePkg/Library/BrotliCustomDecompressLib/brotli'
+2026-11-01T02:02:32.8105580Z Submodule 'MdePkg/Library/BaseFdtLib/libfdt' (https://github.com/devicetree-org/pylibfdt.git) registered for path 'MdePkg/Library/BaseFdtLib/libfdt'
+2026-11-01T02:02:32.8114890Z Submodule 'MdePkg/Library/MipiSysTLib/mipisyst' (https://github.com/MIPI-Alliance/public-mipi-sys-t.git) registered for path 'MdePkg/Library/MipiSysTLib/mipisyst'
+2026-11-01T02:02:32.8121260Z Submodule 'SecurityPkg/DeviceSecurity/SpdmLib/libspdm' (https://github.com/DMTF/libspdm.git) registered for path 'SecurityPkg/DeviceSecurity/SpdmLib/libspdm'
+2026-11-01T02:02:32.8334750Z Cloning into '/Users/runner/work/unixnu-houji/unixnu-houji/unixnu/out/feeds/mu_basecore-89034cbb/BaseTools/Source/C/BrotliCompress/brotli'...
+2026-11-01T02:02:34.1798560Z Cloning into '/Users/runner/work/unixnu-houji/unixnu-houji/unixnu/out/feeds/mu_basecore-89034cbb/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli'...
+2026-11-01T02:02:35.5396410Z Cloning into '/Users/runner/work/unixnu-houji/unixnu-houji/unixnu/out/feeds/mu_basecore-89034cbb/MdePkg/Library/BaseFdtLib/libfdt'...
+2026-11-01T02:02:36.1067750Z Cloning into '/Users/runner/work/unixnu-houji/unixnu-houji/unixnu/out/feeds/mu_basecore-89034cbb/MdePkg/Library/MipiSysTLib/mipisyst'...
+2026-11-01T02:02:36.7149780Z Cloning into '/Users/runner/work/unixnu-houji/unixnu-houji/unixnu/out/feeds/mu_basecore-89034cbb/SecurityPkg/DeviceSecurity/SpdmLib/libspdm'...
+2026-11-01T02:02:39.2554400Z From https://github.com/google/brotli
+2026-11-01T02:02:39.2555020Z  * branch            e230f474b87134e8c6c85b630084c612057f253e -> FETCH_HEAD
+2026-11-01T02:02:39.5794640Z Submodule path 'BaseTools/Source/C/BrotliCompress/brotli': checked out 'e230f474b87134e8c6c85b630084c612057f253e'
+2026-11-01T02:02:40.7055720Z From https://github.com/google/brotli
+2026-11-01T02:02:40.7102410Z  * branch            e230f474b87134e8c6c85b630084c612057f253e -> FETCH_HEAD
+2026-11-01T02:02:40.9928570Z Submodule path 'MdeModulePkg/Library/BrotliCustomDecompressLib/brotli': checked out 'e230f474b87134e8c6c85b630084c612057f253e'
+2026-11-01T02:02:42.0315630Z From https://github.com/devicetree-org/pylibfdt
+2026-11-01T02:02:42.0321230Z  * branch            cfff805481bdea27f900c32698171286542b8d3c -> FETCH_HEAD
+2026-11-01T02:02:42.0770690Z Submodule path 'MdePkg/Library/BaseFdtLib/libfdt': checked out 'cfff805481bdea27f900c32698171286542b8d3c'
+2026-11-01T02:02:42.9768650Z From https://github.com/MIPI-Alliance/public-mipi-sys-t
+2026-11-01T02:02:42.9806460Z  * branch            370b5944c046bab043dd8b133727b2135af7747a -> FETCH_HEAD
+2026-11-01T02:02:43.0585640Z Submodule path 'MdePkg/Library/MipiSysTLib/mipisyst': checked out '370b5944c046bab043dd8b133727b2135af7747a'
+2026-11-01T02:02:44.8289850Z From https://github.com/DMTF/libspdm
+2026-11-01T02:02:44.8292620Z  * branch            f55cf6d48ec69b4ac60a63903e9c6a2cb0fd155d -> FETCH_HEAD
+2026-11-01T02:02:45.3655060Z Submodule path 'SecurityPkg/DeviceSecurity/SpdmLib/libspdm': checked out 'f55cf6d48ec69b4ac60a63903e9c6a2cb0fd155d'
+2026-11-01T02:02:45.3915720Z == fetch https://github.com/apple-oss-distributions/libpthread.git c0e60fb5ecfc
+2026-11-01T02:02:45.4414170Z + git -C /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/out/feeds/libpthread-67dc7894 fetch -q --depth 1 origin c0e60fb5ecfc54cf379c261d3f9572cc22ded891
+2026-11-01T02:02:46.1193870Z == fetch https://github.com/ONLYA/corecrypto-2023.git 11fba65b12d8
+2026-11-01T02:02:46.1802320Z + git -C /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/out/feeds/corecrypto-2023-5ef10490 fetch -q --depth 1 origin 11fba65b12d8830630e248dfa8344caf8b065f26
+2026-11-01T02:02:49.9246390Z == fetch https://github.com/apple-oss-distributions/IOStorageFamily.git e45fbe30a787
+2026-11-01T02:02:50.0166870Z + git -C /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/out/feeds/IOStorageFamily-ad2e13e0 fetch -q --depth 1 origin e45fbe30a7879e0b16e26dddb78538f1b00e0bff
+2026-11-01T02:02:50.9993240Z == wrote /Users/runner/work/unixnu-houji/unixnu-houji/device/unixnu.lock
+2026-11-01T02:02:51.2262120Z == submodules /Users/runner/work/unixnu-houji/unixnu-houji/unixnu
+2026-11-01T02:02:52.4806260Z == tree /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/out/houji/tree
+2026-11-01T02:02:56.1601880Z device   /Users/runner/work/unixnu-houji/unixnu-houji/device (houji)
+2026-11-01T02:02:56.1603550Z output   /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/out/houji
+2026-11-01T02:02:56.1614870Z config   /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/out/houji/.config
+2026-11-01T02:02:56.1616120Z driver   Adreno740                base
+2026-11-01T02:02:56.1616540Z driver   AdrenoMetal              base
+2026-11-01T02:02:56.1616900Z driver   AppleKeyStoreState       base
+2026-11-01T02:02:56.1617190Z driver   ArmCpu                   base
+2026-11-01T02:02:56.1617520Z driver   ArmDTPlatform            base
+2026-11-01T02:02:56.1617960Z driver   ArmVirtPlatform          base
+2026-11-01T02:02:56.1618230Z driver   DarwinBoot               base
+2026-11-01T02:02:56.1618650Z driver   GopFramebuffer           base
+2026-11-01T02:02:56.1618930Z driver   QcomGeniSpi              base
+2026-11-01T02:02:56.1619250Z driver   RamBlock                 base
+2026-11-01T02:02:56.1619600Z driver   SoftwareAES              base
+2026-11-01T02:02:56.1619960Z driver   VirtioMmioBlock          base
+2026-11-01T02:02:56.1620300Z driver   VirtioMmioConsole        base
+2026-11-01T02:02:56.1620590Z kit      AdrenoFirmware           base
+2026-11-01T02:02:56.1620940Z kit      AdrenoPM4                base
+2026-11-01T02:02:56.1621230Z kit      AirNir                   base
+2026-11-01T02:02:56.1621660Z kit      ArmSmmu4K                base
+2026-11-01T02:02:56.1622030Z kit      VerifiedRoot             base
+2026-11-01T02:02:56.1622470Z kit      XnuPrelink               base
+2026-11-01T02:02:56.1622800Z package  main                     base
+2026-11-01T02:02:56.1623210Z patch    libpthread               base
+2026-11-01T02:02:56.1623510Z patch    mesa                     base
+2026-11-01T02:02:56.1623940Z patch    uefi                     device
+2026-11-01T02:02:56.1625280Z patch    xnu                      device
+2026-11-01T02:02:56.1625770Z patch    xnu-12377                base
+2026-11-01T02:02:56.1626220Z refer    AvailabilityVersions     git pinned 933f9360f1b7
+2026-11-01T02:02:56.1626690Z refer    IOStorageFamily          git pinned e45fbe30a787
+2026-11-01T02:02:56.1659770Z refer    corecrypto-2023          git pinned 11fba65b12d8
+2026-11-01T02:02:56.1660440Z refer    edk2                     git pinned cfb93724a06f
+2026-11-01T02:02:56.1660750Z refer    libdispatch              git pinned 30fe6a7d9453
+2026-11-01T02:02:56.1661080Z refer    libplatform              git pinned a00a4cc36da2
+2026-11-01T02:02:56.1661440Z refer    libpthread               git pinned c0e60fb5ecfc
+2026-11-01T02:02:56.1661910Z refer    xnu                      git pinned d8b80295118e
+2026-11-01T02:02:56.1928500Z ##[group]Run bash "$DEVICE_DIR/scripts/apply-tree-xnu-fixes.sh" "$DEVICE_DIR"
+2026-11-01T02:02:56.1929020Z [36;1mbash "$DEVICE_DIR/scripts/apply-tree-xnu-fixes.sh" "$DEVICE_DIR"[0m
+2026-11-01T02:02:56.1994270Z shell: /bin/bash -e {0}
+2026-11-01T02:02:56.1994690Z env:
+2026-11-01T02:02:56.1995140Z   DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+2026-11-01T02:02:56.1995560Z   DEVICE_DIR: /Users/runner/work/unixnu-houji/unixnu-houji/device
+2026-11-01T02:02:56.1998650Z   GITHUB_TOKEN: ***
+2026-11-01T02:02:56.1998970Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.13.17/arm64
+2026-11-01T02:02:56.1999420Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.13.17/arm64/lib/pkgconfig
+2026-11-01T02:02:56.2000060Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.13.17/arm64
+2026-11-01T02:02:56.2000510Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.13.17/arm64
+2026-11-01T02:02:56.2000920Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.13.17/arm64
+2026-11-01T02:02:56.2001280Z ##[endgroup]
+2026-11-01T02:02:56.2939380Z no XNU work tree at /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/out/houji/tree/.cache/xnu-work; run ./unixnu tree -D /Users/runner/work/unixnu-houji/unixnu-houji/device from the UniXNU checkout, or set UNIXNU_TREE
+2026-11-01T02:02:56.2972800Z ##[error]Process completed with exit code 1.
+2026-11-01T02:02:56.3039740Z ##[group]Run mkdir -p artifact/logs artifact/kernel artifact/raw
+2026-11-01T02:02:56.3040330Z [36;1mmkdir -p artifact/logs artifact/kernel artifact/raw[0m
+2026-11-01T02:02:56.3040660Z [36;1mfor f in unixnu/out/houji/logs/*.log; do[0m
+2026-11-01T02:02:56.3041040Z [36;1m  [ -f "$f" ] || continue[0m
+2026-11-01T02:02:56.3041370Z [36;1m  tail -n 2000 "$f" > "artifact/logs/$(basename "$f")"[0m
+2026-11-01T02:02:56.3041750Z [36;1mdone[0m
+2026-11-01T02:02:56.3042080Z [36;1mcp -a unixnu/out/houji/kernel/. artifact/kernel/ 2>/dev/null || true[0m
+2026-11-01T02:02:56.3042620Z [36;1mfind unixnu/out/houji/tree/build/xnu/ios-obj -maxdepth 3 -name 'mach.*' -size +1M \[0m
+2026-11-01T02:02:56.3043200Z [36;1m  -exec cp {} artifact/raw/ \; 2>/dev/null || true[0m
+2026-11-01T02:02:56.3043540Z [36;1mcp device/unixnu.lock artifact/ 2>/dev/null || true[0m
+2026-11-01T02:02:56.3043930Z [36;1mdu -sh artifact; find artifact -type f | head -30[0m
+2026-11-01T02:02:56.3083520Z shell: /bin/bash -e {0}
+2026-11-01T02:02:56.3083910Z env:
+2026-11-01T02:02:56.3084250Z   DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+2026-11-01T02:02:56.3084850Z   DEVICE_DIR: /Users/runner/work/unixnu-houji/unixnu-houji/device
+2026-11-01T02:02:56.3087750Z   GITHUB_TOKEN: ***
+2026-11-01T02:02:56.3088090Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.13.17/arm64
+2026-11-01T02:02:56.3088670Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.13.17/arm64/lib/pkgconfig
+2026-11-01T02:02:56.3089140Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.13.17/arm64
+2026-11-01T02:02:56.3089670Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.13.17/arm64
+2026-11-01T02:02:56.3090110Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.13.17/arm64
+2026-11-01T02:02:56.3090920Z ##[endgroup]
+2026-11-01T02:02:56.3798500Z 4.0K	artifact
+2026-11-01T02:02:56.3841000Z artifact/unixnu.lock
+2026-11-01T02:02:56.3936900Z ##[group]Run actions/upload-artifact@v4
+2026-11-01T02:02:56.3937190Z with:
+2026-11-01T02:02:56.3937400Z   name: houji-kernel-3
+2026-11-01T02:02:56.3937630Z   include-hidden-files: true
+2026-11-01T02:02:56.3937830Z   if-no-files-found: warn
+2026-11-01T02:02:56.3938000Z   path: artifact/**
+2026-11-01T02:02:56.3938150Z   compression-level: 6
+2026-11-01T02:02:56.3938330Z   overwrite: false
+2026-11-01T02:02:56.3938480Z env:
+2026-11-01T02:02:56.3938720Z   DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+2026-11-01T02:02:56.3939360Z   DEVICE_DIR: /Users/runner/work/unixnu-houji/unixnu-houji/device
+2026-11-01T02:02:56.3942030Z   GITHUB_TOKEN: ***
+2026-11-01T02:02:56.3942300Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.13.17/arm64
+2026-11-01T02:02:56.3943220Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.13.17/arm64/lib/pkgconfig
+2026-11-01T02:02:56.3943880Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.13.17/arm64
+2026-11-01T02:02:56.3944360Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.13.17/arm64
+2026-11-01T02:02:56.3944780Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.13.17/arm64
+2026-11-01T02:02:56.3945110Z ##[endgroup]
+2026-11-01T02:02:56.8426530Z (node:6782) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-01T02:02:56.8427140Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-01T02:02:56.8499700Z With the provided path, there will be 1 file uploaded
+2026-11-01T02:02:56.8502710Z Artifact name is valid!
+2026-11-01T02:02:56.8503150Z Root directory input is valid!
+2026-11-01T02:02:57.3157310Z Beginning upload of artifact content to blob storage
+2026-11-01T02:02:57.3448380Z (node:6782) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-01T02:02:57.6319050Z Uploaded bytes 528
+2026-11-01T02:02:57.7203070Z Finished uploading artifact content to blob storage!
+2026-11-01T02:02:57.7204610Z SHA256 digest of uploaded artifact zip is c8f5d28a3f1707ba98daa08add66b6e30b0df96f4f62a82a30c2e7c8f73829a8
+2026-11-01T02:02:57.7205210Z Finalizing artifact upload
+2026-11-01T02:02:58.2220410Z Artifact houji-kernel-3.zip successfully finalized. Artifact ID 13065734805
+2026-11-01T02:02:58.2221260Z Artifact houji-kernel-3 has been successfully uploaded! Final size is 528 bytes. Artifact ID is 13065734805
+2026-11-01T02:02:58.2222090Z Artifact download URL: https://github.com/SAKAYORILROHA/unixnu-houji/actions/runs/41263437344/artifacts/13065734805
+2026-11-01T02:02:58.3035800Z Post job cleanup.
+2026-11-01T02:02:58.4861900Z [command]/opt/homebrew/bin/git version
+2026-11-01T02:02:58.4969260Z git version 2.56.0
+2026-11-01T02:02:58.4991020Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/cd3c4bb1-9fa7-4791-a09b-22ec7fd23df2/.gitconfig'
+2026-11-01T02:02:58.5010410Z Temporarily overriding HOME='/Users/runner/work/_temp/cd3c4bb1-9fa7-4791-a09b-22ec7fd23df2' before making global git config changes
+2026-11-01T02:02:58.5012170Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-01T02:02:58.5013770Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/unixnu-houji/unixnu-houji/device
+2026-11-01T02:02:58.5249500Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-01T02:02:58.5544530Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-01T02:02:58.6857140Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-01T02:02:58.7087960Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-01T02:02:59.0751840Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:02:59.1055410Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-01T02:02:59.2951910Z Post job cleanup.
+2026-11-01T02:02:59.5697160Z [command]/opt/homebrew/bin/git version
+2026-11-01T02:02:59.5798860Z git version 2.56.0
+2026-11-01T02:02:59.6370090Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/3425c91a-b393-4d84-9442-731ac7d660b9/.gitconfig'
+2026-11-01T02:02:59.6474690Z Temporarily overriding HOME='/Users/runner/work/_temp/3425c91a-b393-4d84-9442-731ac7d660b9' before making global git config changes
+2026-11-01T02:02:59.6577440Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-01T02:02:59.6679280Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/unixnu-houji/unixnu-houji/unixnu
+2026-11-01T02:02:59.6917380Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-01T02:02:59.6948800Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-01T02:02:59.9099180Z Entering 'drivers/Adreno740'
+2026-11-01T02:03:00.1553600Z Entering 'drivers/AdrenoMetal'
+2026-11-01T02:03:00.3767730Z Entering 'drivers/AppleKeyStoreState'
+2026-11-01T02:03:00.4321280Z Entering 'drivers/ArmCpu'
+2026-11-01T02:03:00.5185930Z Entering 'drivers/ArmDTPlatform'
+2026-11-01T02:03:00.5691130Z Entering 'drivers/ArmVirtPlatform'
+2026-11-01T02:03:00.7152650Z Entering 'drivers/DarwinBoot'
+2026-11-01T02:03:00.8086640Z Entering 'drivers/GopFramebuffer'
+2026-11-01T02:03:00.9149370Z Entering 'drivers/QcomGeniSpi'
+2026-11-01T02:03:00.9752060Z Entering 'drivers/RamBlock'
+2026-11-01T02:03:01.0175020Z Entering 'drivers/SoftwareAES'
+2026-11-01T02:03:01.0539370Z Entering 'drivers/VirtioMmioBlock'
+2026-11-01T02:03:01.0907220Z Entering 'drivers/VirtioMmioConsole'
+2026-11-01T02:03:01.1457030Z Entering 'kits/AdrenoFirmware'
+2026-11-01T02:03:01.1889380Z Entering 'kits/AdrenoPM4'
+2026-11-01T02:03:01.2251800Z Entering 'kits/AirNir'
+2026-11-01T02:03:01.3303250Z Entering 'kits/ArmSmmu4K'
+2026-11-01T02:03:01.4891950Z Entering 'kits/VerifiedRoot'
+2026-11-01T02:03:01.5439900Z Entering 'kits/XnuPrelink'
+2026-11-01T02:03:01.6083760Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-01T02:03:01.6285110Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-01T02:03:01.8099520Z Entering 'drivers/Adreno740'
+2026-11-01T02:03:01.8918750Z Entering 'drivers/AdrenoMetal'
+2026-11-01T02:03:01.9455840Z Entering 'drivers/AppleKeyStoreState'
+2026-11-01T02:03:01.9955250Z Entering 'drivers/ArmCpu'
+2026-11-01T02:03:02.0342890Z Entering 'drivers/ArmDTPlatform'
+2026-11-01T02:03:02.0729860Z Entering 'drivers/ArmVirtPlatform'
+2026-11-01T02:03:02.1130770Z Entering 'drivers/DarwinBoot'
+2026-11-01T02:03:02.1899610Z Entering 'drivers/GopFramebuffer'
+2026-11-01T02:03:02.3176470Z Entering 'drivers/QcomGeniSpi'
+2026-11-01T02:03:02.4900910Z Entering 'drivers/RamBlock'
+2026-11-01T02:03:02.5574340Z Entering 'drivers/SoftwareAES'
+2026-11-01T02:03:02.6076960Z Entering 'drivers/VirtioMmioBlock'
+2026-11-01T02:03:02.6376180Z Entering 'drivers/VirtioMmioConsole'
+2026-11-01T02:03:02.6745500Z Entering 'kits/AdrenoFirmware'
+2026-11-01T02:03:02.7525460Z Entering 'kits/AdrenoPM4'
+2026-11-01T02:03:02.8254880Z Entering 'kits/AirNir'
+2026-11-01T02:03:02.8843570Z Entering 'kits/ArmSmmu4K'
+2026-11-01T02:03:02.9234150Z Entering 'kits/VerifiedRoot'
+2026-11-01T02:03:02.9689090Z Entering 'kits/XnuPrelink'
+2026-11-01T02:03:03.0729740Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:03:03.0960050Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-01T02:03:03.2676630Z Entering 'drivers/Adreno740'
+2026-11-01T02:03:03.2979010Z file:/Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/Adreno740/config	remote.origin.url
+2026-11-01T02:03:03.3080600Z Entering 'drivers/AdrenoMetal'
+2026-11-01T02:03:03.3293370Z file:/Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/AdrenoMetal/config	remote.origin.url
+2026-11-01T02:03:03.3397780Z Entering 'drivers/AppleKeyStoreState'
+2026-11-01T02:03:03.3600050Z file:/Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/AppleKeyStoreState/config	remote.origin.url
+2026-11-01T02:03:03.3699940Z Entering 'drivers/ArmCpu'
+2026-11-01T02:03:03.4047890Z file:/Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/ArmCpu/config	remote.origin.url
+2026-11-01T02:03:03.4149610Z Entering 'drivers/ArmDTPlatform'
+2026-11-01T02:03:03.4394740Z file:/Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/ArmDTPlatform/config	remote.origin.url
+2026-11-01T02:03:03.4496810Z Entering 'drivers/ArmVirtPlatform'
+2026-11-01T02:03:03.4698580Z file:/Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/ArmVirtPlatform/config	remote.origin.url
+2026-11-01T02:03:03.4799000Z Entering 'drivers/DarwinBoot'
+2026-11-01T02:03:03.6216270Z file:/Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/DarwinBoot/config	remote.origin.url
+2026-11-01T02:03:03.6917550Z Entering 'drivers/GopFramebuffer'
+2026-11-01T02:03:03.7879870Z file:/Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/GopFramebuffer/config	remote.origin.url
+2026-11-01T02:03:03.7982420Z Entering 'drivers/QcomGeniSpi'
+2026-11-01T02:03:03.8285210Z file:/Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/QcomGeniSpi/config	remote.origin.url
+2026-11-01T02:03:03.8386780Z Entering 'drivers/RamBlock'
+2026-11-01T02:03:03.8695120Z file:/Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/RamBlock/config	remote.origin.url
+2026-11-01T02:03:03.8897540Z Entering 'drivers/SoftwareAES'
+2026-11-01T02:03:03.9199130Z file:/Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/SoftwareAES/config	remote.origin.url
+2026-11-01T02:03:03.9400070Z Entering 'drivers/VirtioMmioBlock'
+2026-11-01T02:03:03.9501660Z file:/Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/VirtioMmioBlock/config	remote.origin.url
+2026-11-01T02:03:03.9602080Z Entering 'drivers/VirtioMmioConsole'
+2026-11-01T02:03:03.9806010Z file:/Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/VirtioMmioConsole/config	remote.origin.url
+2026-11-01T02:03:04.0017830Z Entering 'kits/AdrenoFirmware'
+2026-11-01T02:03:04.0322540Z file:/Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/kits/AdrenoFirmware/config	remote.origin.url
+2026-11-01T02:03:04.0432330Z Entering 'kits/AdrenoPM4'
+2026-11-01T02:03:04.0633010Z file:/Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/kits/AdrenoPM4/config	remote.origin.url
+2026-11-01T02:03:04.0832990Z Entering 'kits/AirNir'
+2026-11-01T02:03:04.1042950Z file:/Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/kits/AirNir/config	remote.origin.url
+2026-11-01T02:03:04.1144570Z Entering 'kits/ArmSmmu4K'
+2026-11-01T02:03:04.1511360Z file:/Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/kits/ArmSmmu4K/config	remote.origin.url
+2026-11-01T02:03:04.1632070Z Entering 'kits/VerifiedRoot'
+2026-11-01T02:03:04.1941420Z file:/Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/kits/VerifiedRoot/config	remote.origin.url
+2026-11-01T02:03:04.2141800Z Entering 'kits/XnuPrelink'
+2026-11-01T02:03:04.2446490Z file:/Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/kits/XnuPrelink/config	remote.origin.url
+2026-11-01T02:03:04.2853130Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/Adreno740/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:03:04.3164740Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/AdrenoMetal/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:03:04.3475780Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/AppleKeyStoreState/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:03:04.3778490Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/ArmCpu/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:03:04.4088430Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/ArmDTPlatform/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:03:04.4402290Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/ArmVirtPlatform/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:03:04.4707950Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/DarwinBoot/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:03:04.5013280Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/GopFramebuffer/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:03:04.5217400Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/QcomGeniSpi/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:03:04.5519580Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/RamBlock/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:03:04.5823180Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/SoftwareAES/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:03:04.6171930Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/VirtioMmioBlock/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:03:04.6496300Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/drivers/VirtioMmioConsole/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:03:04.6685870Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/kits/AdrenoFirmware/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:03:04.6891490Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/kits/AdrenoPM4/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:03:04.7001230Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/kits/AirNir/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:03:04.7006500Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/kits/ArmSmmu4K/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:03:04.7008350Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/kits/VerifiedRoot/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:03:04.7010160Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/unixnu-houji/unixnu-houji/unixnu/.git/modules/kits/XnuPrelink/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-01T02:03:04.7177110Z Cleaning up orphan processes
+2026-11-01T02:03:07.2026690Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
